@@ -1,7 +1,6 @@
 :root {
-  --main-text-color: rgba(0, 0, 0, 0.8);
+  --main-text-color: #757575;
   --secondary-text-color: #000000;
-  --gray-text-color: #757575;
   --main-bg-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
   --accent-color: #2196f3;
@@ -14,7 +13,8 @@
 body {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
-  font-family: "Roboto", "Montserrat", "Helvetica", "Tahoma", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 .list {
@@ -23,7 +23,7 @@ body {
 
 /* logo */
 .logo {
-  color: var(--secondary-text-color);
+  color: var(--accent-color);
   text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -31,8 +31,8 @@ body {
   letter-spacing: 0.03em;
 }
 
-.logo span {
-  color: var(--accent-color);
+.logo .dark-text {
+  color: var(--secondary-text-color);
 }
 
 /* navigation menu */
@@ -45,16 +45,13 @@ body {
 }
 
 .contact-link {
-  color: var(--gray-text-color);
+  color: var(--main-text-color);
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus,
 .contact-link:hover,
-.contact-link:focus {
-  color: var(--accent-color);
-}
-
+.contact-link:focus,
 .link.current {
   color: var(--accent-color);
 }
@@ -90,11 +87,14 @@ body {
 .order-btn {
   color: var(--inverted-text-color);
   background-color: var(--accent-color);
-  font-family: Roboto;
+  font-family: inherit;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -113,6 +113,10 @@ body {
 /* jobs section */
 
 /* team section */
+
+.team {
+  background-color: var(--secondary-bg-color);
+}
 
 .person {
   text-align: center;
@@ -148,7 +152,7 @@ body {
   color: var(--accent-color);
 }
 
-.footer .logo {
+.inverted-text {
   color: var(--inverted-text-color);
 }
 
@@ -157,15 +161,19 @@ body {
 .filter-btn {
   color: var(--dark-text-color);
   background-color: var(--secondary-bg-color);
-  font-family: Roboto;
+  font-family: inherit;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 0.03em;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.filter-btn:hover {
+.filter-btn:hover,
+.filter-btn:focus,
+.filter-btn.active {
   color: var(--inverted-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -173,7 +181,7 @@ body {
 }
 
 .portfolio-item {
-  color: var(--gray-text-color);
+  color: var(--main-text-color);
   font-size: 16;
   line-height: 1.87;
   letter-spacing: 0.03em;
